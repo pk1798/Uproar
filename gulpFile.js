@@ -3,9 +3,9 @@ const sass = require("gulp-sass");
 const browsersync = require("browser-sync");
 const { stream } = require("browser-sync");
 const imagemin = require("gulp-imagemin");
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
 
@@ -18,7 +18,7 @@ function style() {
 }
 
 function minifyCss(){
-  return gulp.src('./dist/css/*.css')
+  return gulp.src('./dist/css/main.css')
   .pipe(cleanCSS({compatibility: 'ie8'}))
   .pipe(rename('main.min.css'))
   .pipe(gulp.dest('./dist/css'));

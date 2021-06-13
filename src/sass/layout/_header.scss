@@ -1,0 +1,70 @@
+header {
+  width: 20%;
+  height: 100vh;
+  float: left;
+  background-color: rgba(156, 165, 236, 0.04);
+  nav {
+    .logo {
+      width: calc(100% - 60px);
+      margin: auto;
+      position: relative;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      h1 {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        line-height: 0.83;
+        letter-spacing: 1px;
+      }
+      p {
+        display: inline-block;
+      }
+    }
+    .dropdown {
+      .nav-menu {
+        display: block;
+        letter-spacing: 1px;
+        padding: 15px 30px 15px 30px;
+        svg {
+          float: right;
+        }
+      }
+      .dropdown__content {
+        .nav-sub-menu {
+          display: block;
+          padding: 15px 0 15px 50px;
+          opacity: 50%;
+          svg {
+            margin-right: 25px;
+          }
+        }
+        .dropdown {
+        }
+        .dropdown__content {
+        }
+      }
+    }
+    .dropdown.main {
+      padding-top: 15px;
+      border-top: 1px solid rgba(216, 216, 216, 0.6);
+    }
+    .my-games {
+      padding: 15px 0 15px 30px;
+      border-top: 1px solid rgba(216, 216, 216, 0.6);
+      border-bottom: 1px solid rgba(216, 216, 216, 0.6);
+
+      svg {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.tag {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 3px;
+  margin-left: 8px;
+}

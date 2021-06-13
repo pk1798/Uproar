@@ -1,0 +1,21 @@
+.weekly-quests {
+  .header {
+    margin-top: 40px;
+    .header__title {
+      display: inline-block;
+      margin-bottom: 25px;
+      p {
+      }
+      h2 {
+        margin-top: 10px;
+      }
+    }
+    .header__controls {
+      display: inline-block;
+      float: right;
+      button {
+        display: inline-block;
+      }
+    }
+  }
+}

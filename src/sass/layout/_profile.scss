@@ -1,0 +1,60 @@
+.profile {
+  .profile__nav {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    a {
+      margin-left: 30px;
+      opacity: 0.6;
+    }
+    .dropdown {
+      img {
+        margin-left: 20px;
+        margin-right: 10px;
+        border-left: 1px solid rgba(216, 216, 216, 0.6);
+      }
+      p {
+      }
+      .dropdown-content {
+        a {
+        }
+      }
+    }
+  }
+  .profile__info {
+    float: right;
+    .points {
+      float: left;
+      line-height: 72px;
+      .uproar-points {
+        svg {
+        }
+        p {
+        }
+      }
+      .bolt-points {
+        svg {
+        }
+        p {
+        }
+      }
+    }
+    .profile-details {
+      float: right;
+      img {
+        float: left;
+      }
+      div {
+        float: right;
+        height: 72px;
+
+        display: table;
+
+        p {
+          // display: block;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

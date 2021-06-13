@@ -1,0 +1,64 @@
+// typography
+
+// font colors
+
+.primary {
+  color: $primary;
+}
+.secondary {
+  color: $secondary;
+}
+
+.active {
+  color: $active;
+}
+
+.light {
+  color: $light;
+}
+.dark {
+  color: $dark;
+}
+
+//font size
+
+.text-1 {
+  font-size: $font-size-xxl;
+}
+.text-2 {
+  font-size: $font-size-xl;
+}
+.text-3 {
+  font-size: $font-size-lg;
+}
+.text-4 {
+  font-size: $font-size-md;
+}
+.text-5 {
+  font-size: $font-size-sm;
+}
+.text-6 {
+  font-size: $font-size-exsm;
+}
+
+// font weight
+
+.normal {
+  font-weight: $font-normal;
+}
+
+.bold {
+  font-weight: $font-bold;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}

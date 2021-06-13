@@ -1,0 +1,47 @@
+.card-small {
+  width: 225px;
+  background-color: rgba(156, 165, 236, 0.04);
+  margin-top: 50px;
+  display: inline-block;
+  margin: 5px;
+  .card-wrapper {
+    position: relative;
+    img {
+      position: absolute;
+      top: -20px;
+      left: 10px;
+    }
+    .tag {
+      display: inline-block;
+      position: absolute;
+      top: 40px;
+      left: 25px;
+    }
+    .details {
+      margin-left: 100px;
+    }
+    .card__points {
+      margin-top: 15px;
+      border-top: 1px solid gray;
+      padding: 16px 15px;
+      .points {
+        display: inline-block;
+        svg {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+        }
+        p {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+          margin-right: 15px;
+        }
+      }
+      .accept-button {
+        display: inline-block;
+        margin-left: 15px;
+      }
+    }
+  }
+}
