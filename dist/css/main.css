@@ -199,31 +199,61 @@ button {
   padding: 10px; }
 
 .card {
-  width: 255px;
+  width: calc((100% - 30px) / 4);
   background-image: linear-gradient(119deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1));
   border-radius: 6px;
   display: inline-block;
-  margin: 5px; }
-  .card img {
-    width: 100%;
-    border-radius: 6px; }
-  .card h3 {
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative; }
+  .card .genre {
+    background-color: #6f6eff;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 4px 8px;
+    position: absolute;
+    top: 15px;
+    left: 15px; }
+  .card figure img {
+    border-radius: 6px;
+    width: 100%; }
+  .card figure figcaption {
     color: #ffffff;
-    margin-top: 15px; }
-  .card p {
+    padding: 15px 15px 0 15px; }
+  .card figure p {
     color: #ffffff;
     opacity: 0.5;
-    margin-top: 10px; }
+    padding: 10px 15px 15px 15px; }
   .card .card__points {
     margin-top: 15px;
     border-top: 1px solid gray;
     padding: 16px 15px; }
     .card .card__points .points {
-      display: inline-block; }
-      .card .card__points .points svg {
+      display: inline-block;
+      float: left; }
+      .card .card__points .points svg.logo {
         display: inline-block;
         vertical-align: middle;
-        text-align: center; }
+        text-align: center;
+        background-color: #6f6eff;
+        padding: 3px 2px 3px 3px;
+        object-fit: contain;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        margin-right: 11px; }
+      .card .card__points .points svg.bolt {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #ff4738;
+        padding: 3px 2px 3px 3px;
+        object-fit: contain;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        margin-right: 11px; }
       .card .card__points .points p {
         display: inline-block;
         vertical-align: middle;
@@ -233,43 +263,107 @@ button {
       display: inline-block;
       margin-left: 15px; }
 
+.card:nth-child(4) {
+  margin-right: 0; }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .card {
+    width: 100%; } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    width: calc((100% - 15px) / 2); } }
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card {
+    width: calc((100% - 30px) / 3); } }
+
 .card-small {
-  width: 225px;
-  background-color: rgba(156, 165, 236, 0.04);
-  margin-top: 50px;
+  width: calc((100% - 30px) / 4);
+  background-image: linear-gradient(119deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1));
+  border-radius: 6px;
   display: inline-block;
-  margin: 5px; }
-  .card-small .card-wrapper {
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+  .card-small figure {
     position: relative; }
-    .card-small .card-wrapper img {
-      position: absolute;
-      top: -20px;
-      left: 10px; }
-    .card-small .card-wrapper .tag {
+    .card-small figure .genre {
+      background-color: #6f6eff;
       display: inline-block;
+      border-radius: 3px;
+      padding: 2px 4px;
+      font-size: 12px;
       position: absolute;
-      top: 40px;
-      left: 25px; }
-    .card-small .card-wrapper .details {
-      margin-left: 100px; }
-    .card-small .card-wrapper .card__points {
-      margin-top: 15px;
-      border-top: 1px solid gray;
-      padding: 16px 15px; }
-      .card-small .card-wrapper .card__points .points {
-        display: inline-block; }
-        .card-small .card-wrapper .card__points .points svg {
-          display: inline-block;
-          vertical-align: middle;
-          text-align: center; }
-        .card-small .card-wrapper .card__points .points p {
-          display: inline-block;
-          vertical-align: middle;
-          text-align: center;
-          margin-right: 15px; }
-      .card-small .card-wrapper .card__points .accept-button {
+      top: 48px;
+      left: 25px;
+      z-index: 10; }
+    .card-small figure img {
+      position: absolute;
+      top: -15px;
+      left: 10px; }
+    .card-small figure figcaption {
+      margin-left: 80px; }
+      .card-small figure figcaption h3 {
+        color: #ffffff;
+        padding: 15px 15px 0 15px; }
+      .card-small figure figcaption p {
+        color: #ffffff;
+        opacity: 0.5;
+        padding: 10px 15px 15px 15px; }
+  .card-small figure:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .card-small .card__points {
+    margin-top: 15px;
+    border-top: 1px solid gray;
+    padding: 16px 15px; }
+    .card-small .card__points .points {
+      display: inline-block;
+      float: left; }
+      .card-small .card__points .points svg.logo {
         display: inline-block;
-        margin-left: 15px; }
+        vertical-align: middle;
+        text-align: center;
+        background-color: #6f6eff;
+        padding: 3px 2px 3px 3px;
+        object-fit: contain;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        margin-right: 11px; }
+      .card-small .card__points .points svg.bolt {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #ff4738;
+        padding: 3px 2px 3px 3px;
+        object-fit: contain;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        margin-right: 11px; }
+      .card-small .card__points .points p {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        margin-right: 15px; }
+    .card-small .card__points .accept-button {
+      display: inline-block;
+      margin-left: 15px; }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .card-small {
+    width: calc((100% - 30px)); } }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-small {
+    width: calc((100% - 30px) / 2); } }
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card-small {
+    width: calc((100% - 30px) / 3); } }
 
 header {
   width: 20%;
@@ -319,6 +413,10 @@ header {
   border-radius: 3px;
   margin-left: 8px; }
 
+@media (min-width: 320px) and (max-width: 1023px) {
+  header {
+    display: none; } }
+
 .wrapper {
   float: right;
   width: 80%; }
@@ -332,11 +430,27 @@ header {
     width: calc(100% - 110px);
     margin: auto; }
 
+@media (min-width: 320px) and (max-width: 1023px) {
+  .wrapper {
+    float: none;
+    width: 95%;
+    margin: auto; }
+    .wrapper .profile {
+      width: calc(100% - 60px);
+      margin: auto; }
+    .wrapper .weekly-quests {
+      width: calc(100% - 60px);
+      margin: auto; }
+    .wrapper .popular {
+      width: calc(100% - 60px);
+      margin: auto; } }
+
 .profile .profile__nav {
   padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  float: left; }
   .profile .profile__nav a {
-    margin-left: 30px;
+    margin-right: 30px;
     opacity: 0.6; }
   .profile .profile__nav .dropdown img {
     margin-left: 20px;
@@ -344,44 +458,152 @@ header {
     border-left: 1px solid rgba(216, 216, 216, 0.6); }
 
 .profile .profile__info {
-  float: right; }
+  float: right;
+  position: relative;
+  right: 50px; }
   .profile .profile__info .points {
     float: left;
-    line-height: 72px; }
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: -120%;
+    transform: translate(0, -50%); }
+    .profile .profile__info .points .uproar-points {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 5px;
+      border-radius: 3px;
+      display: table;
+      margin: 0;
+      float: left;
+      margin-right: 15px; }
+      .profile .profile__info .points .uproar-points svg {
+        background-color: #6f6eff;
+        padding: 3px 2px 3px 3px;
+        object-fit: contain;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        margin-right: 11px; }
+      .profile .profile__info .points .uproar-points p {
+        display: table-cell;
+        vertical-align: middle; }
+        .profile .profile__info .points .uproar-points p span {
+          margin-left: 13px; }
+    .profile .profile__info .points .bolt-points {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 5px;
+      border-radius: 3px;
+      display: table;
+      margin: 0;
+      float: right;
+      margin-right: 15px; }
+      .profile .profile__info .points .bolt-points svg {
+        background-color: #ff4738;
+        padding: 3px 2px 3px 3px;
+        object-fit: contain;
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        margin-right: 11px; }
+      .profile .profile__info .points .bolt-points p {
+        display: table-cell;
+        vertical-align: middle; }
+        .profile .profile__info .points .bolt-points p span {
+          font-size: 11px;
+          font-weight: 600;
+          opacity: 0.6;
+          line-height: 0.91; }
   .profile .profile__info .profile-details {
-    float: right; }
+    float: right;
+    clear: both; }
     .profile .profile__info .profile-details img {
       float: left; }
     .profile .profile__info .profile-details div {
       float: right;
       height: 72px;
-      display: table; }
+      display: table;
+      position: relative; }
       .profile .profile__info .profile-details div p {
         display: table-cell;
         vertical-align: middle; }
+      .profile .profile__info .profile-details div .status {
+        position: absolute;
+        left: 0;
+        bottom: 15%;
+        color: #24cb8d; }
+      .profile .profile__info .profile-details div .pro {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-color: #6f6eff;
+        font-size: 11px;
+        padding: 2px 9px 2px 10px;
+        border-radius: 3px;
+        margin-left: 13px; }
+
+.profile::after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .weekly-quests .header {
   margin-top: 40px; }
   .weekly-quests .header .header__title {
     display: inline-block;
     margin-bottom: 25px; }
+    .weekly-quests .header .header__title p {
+      text-transform: uppercase;
+      opacity: 0.4; }
     .weekly-quests .header .header__title h2 {
       margin-top: 10px; }
   .weekly-quests .header .header__controls {
     display: inline-block;
-    float: right; }
+    float: right;
+    display: table; }
     .weekly-quests .header .header__controls button {
-      display: inline-block; }
+      display: inline-block;
+      display: table-cell;
+      vertical-align: middle;
+      margin-right: 10px; }
+    .weekly-quests .header .header__controls button.svg {
+      padding: 9px;
+      background-color: #2b2c3a;
+      border: 1px solid rgba(216, 216, 216, 0.6);
+      border-radius: 4px;
+      line-height: 30px;
+      margin-right: 5px; }
+      .weekly-quests .header .header__controls button.svg svg {
+        display: block;
+        margin: auto; }
 
 .popular .header {
   margin-top: 40px; }
   .popular .header .header__title {
     display: inline-block;
     margin-bottom: 25px; }
+    .popular .header .header__title p {
+      text-transform: uppercase;
+      opacity: 0.4; }
     .popular .header .header__title h2 {
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-bottom: 40px; }
   .popular .header .header__controls {
     display: inline-block;
-    float: right; }
+    float: right;
+    display: table; }
     .popular .header .header__controls button {
-      display: inline-block; }
+      display: inline-block;
+      display: table-cell;
+      vertical-align: middle;
+      margin-right: 10px; }
+    .popular .header .header__controls button.svg {
+      padding: 9px;
+      background-color: #2b2c3a;
+      border: 1px solid rgba(216, 216, 216, 0.6);
+      border-radius: 4px;
+      line-height: 30px;
+      margin-right: 5px; }
+      .popular .header .header__controls button.svg svg {
+        display: block;
+        margin: auto; }

@@ -15,3 +15,24 @@
     margin: auto;
   }
 }
+
+@media (min-width: 320px) and (max-width: 1023px) {
+  .wrapper {
+    float: none;
+    width: 95%;
+    margin: auto;
+    //   border: 1px solid red;
+    .profile {
+      width: calc(100% - 60px);
+      margin: auto;
+    }
+    .weekly-quests {
+      width: calc(100% - 60px);
+      margin: auto;
+    }
+    .popular {
+      width: calc(100% - 60px);
+      margin: auto;
+    }
+  }
+}
