@@ -216,7 +216,7 @@ button {
     top: 15px;
     left: 15px; }
   .card figure img {
-    border-radius: 6px;
+    border-radius: 10px;
     width: 100%; }
   .card figure figcaption {
     color: #ffffff;
