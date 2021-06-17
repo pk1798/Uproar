@@ -3,6 +3,7 @@ header {
   height: 100vh;
   float: left;
   background-color: rgba(156, 165, 236, 0.04);
+
   nav {
     .logo {
       width: calc(100% - 60px);
@@ -40,10 +41,6 @@ header {
             margin-right: 25px;
           }
         }
-        .dropdown {
-        }
-        .dropdown__content {
-        }
       }
     }
     .dropdown.main {
@@ -62,6 +59,17 @@ header {
   }
 }
 
+header {
+  .dropdown {
+    .dropdown__content.hide {
+      display: none;
+    }
+  }
+}
+.bi-list {
+  display: none;
+}
+
 .tag {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 5px;
@@ -71,6 +79,23 @@ header {
 
 @media (min-width: 320px) and (max-width: 1023px) {
   header {
+    display: none;
+  }
+  header.show {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    background-color: #2b2c3a;
+    display: inline-block;
+    width: 80%;
+  }
+  .bi-list {
+    display: inline-block;
+    position: relative;
+    left: 10%;
+    top: 50px;
+  }
+  .bi-list.hide {
     display: none;
   }
 }
