@@ -248,13 +248,9 @@ button {
   background-color: rgba(156, 165, 236, 0.06);
   border-radius: 6px;
   display: inline-block;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   position: relative; }
   .card .genre {
     background-color: #6f6eff;
-    display: inline-block;
     border-radius: 3px;
     padding: 4px 8px;
     position: absolute;
@@ -267,46 +263,46 @@ button {
     color: #ffffff;
     padding: 15px 15px 0 15px; }
   .card figure p {
-    color: #ffffff;
     opacity: 0.5;
     padding: 10px 15px 15px 15px; }
   .card .card__points {
     margin-top: 15px;
     border-top: 1px solid gray;
-    padding: 16px 15px; }
+    padding: 16px 5px; }
     .card .card__points .points {
       display: inline-block;
-      float: left; }
+      float: left;
+      line-height: 35px;
+      margin-bottom: 10px;
+      margin-left: 5px; }
       .card .card__points .points svg.logo {
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
         background-color: #6f6eff;
-        padding: 3px 2px 3px 3px;
+        padding: 3px 2px 3px 4px;
         object-fit: contain;
         width: 18px;
         height: 18px;
         border-radius: 4px;
-        margin-right: 11px; }
+        margin-right: 11px;
+        vertical-align: middle; }
       .card .card__points .points svg.bolt {
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
         background-color: #ff4738;
-        padding: 3px 2px 3px 3px;
+        padding: 3px 2px 3px 4px;
         object-fit: contain;
         width: 18px;
         height: 18px;
         border-radius: 4px;
-        margin-right: 11px; }
+        margin-right: 11px;
+        vertical-align: middle; }
       .card .card__points .points p {
         display: inline-block;
         vertical-align: middle;
         text-align: center;
-        margin-right: 15px; }
+        margin-right: 10px; }
     .card .card__points .accept-button {
-      display: inline-block;
-      margin-left: 15px; }
+      float: right;
+      margin-bottom: 10px;
+      margin-right: 5px;
+      display: inline-block; }
 
 .card:nth-child(4) {
   margin-right: 0; }
@@ -323,92 +319,79 @@ button {
   .card {
     width: calc((100% - 30px) / 4); } }
 
-.card-small {
-  min-width: 100%;
-  background-color: rgba(156, 165, 236, 0.06);
-  border-radius: 6px;
-  display: inline-block;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px; }
-  .card-small figure {
-    position: relative; }
-    .card-small figure .genre {
+.card-wrapper {
+  height: 160px;
+  position: relative; }
+  .card-wrapper .card-small {
+    background-color: rgba(156, 165, 236, 0.06);
+    min-width: 100%;
+    position: absolute;
+    top: 15px; }
+    .card-wrapper .card-small figure .genre {
       background-color: #6f6eff;
-      display: inline-block;
-      border-radius: 3px;
-      padding: 2px 4px;
       font-size: 12px;
+      padding: 0.3em;
+      border-radius: 3px;
       position: absolute;
-      top: 48px;
+      z-index: 10;
       left: 25px;
-      z-index: 10; }
-    .card-small figure img {
+      top: 50px; }
+    .card-wrapper .card-small figure img {
+      float: left;
       position: absolute;
       top: -15px;
       left: 10px; }
-    .card-small figure figcaption {
-      margin-left: 80px; }
-      .card-small figure figcaption h3 {
-        color: #ffffff;
-        padding: 15px 15px 0 15px; }
-      .card-small figure figcaption p {
-        color: #ffffff;
-        opacity: 0.5;
-        padding: 10px 15px 15px 15px; }
-  .card-small figure:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .card-small .card__points {
-    margin-top: 15px;
-    border-top: 1px solid gray;
-    padding: 16px 15px; }
-    .card-small .card__points .points {
+    .card-wrapper .card-small figure figcaption {
       display: inline-block;
-      float: left; }
-      .card-small .card__points .points svg.logo {
+      padding: 5px;
+      margin-left: 90px;
+      padding-bottom: 20px; }
+      .card-wrapper .card-small figure figcaption h3 {
+        margin-bottom: 10px; }
+      .card-wrapper .card-small figure figcaption p {
+        opacity: 0.5; }
+    .card-wrapper .card-small figure::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .card-wrapper .card-small .card__points {
+      margin-top: 15px;
+      border-top: 1px solid gray;
+      padding: 16px 5px; }
+      .card-wrapper .card-small .card__points .points {
         display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-        background-color: #6f6eff;
-        padding: 3px 2px 3px 3px;
-        object-fit: contain;
-        width: 18px;
-        height: 18px;
-        border-radius: 4px;
-        margin-right: 11px; }
-      .card-small .card__points .points svg.bolt {
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-        background-color: #ff4738;
-        padding: 3px 2px 3px 3px;
-        object-fit: contain;
-        width: 18px;
-        height: 18px;
-        border-radius: 4px;
-        margin-right: 11px; }
-      .card-small .card__points .points p {
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-        margin-right: 15px; }
-    .card-small .card__points .accept-button {
-      display: inline-block;
-      margin-left: 15px; }
-
-@media (min-width: 320px) and (max-width: 768px) {
-  .card-small {
-    width: calc((100% - 30px)); } }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .card-small {
-    width: calc((100% - 30px) / 2); } }
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .card-small {
-    width: calc((100% - 30px) / 4); } }
+        float: left;
+        line-height: 35px;
+        margin-bottom: 10px;
+        margin-left: 5px; }
+        .card-wrapper .card-small .card__points .points svg.logo {
+          background-color: #6f6eff;
+          padding: 3px 2px 3px 4px;
+          object-fit: contain;
+          width: 18px;
+          height: 18px;
+          border-radius: 4px;
+          margin-right: 11px;
+          vertical-align: middle; }
+        .card-wrapper .card-small .card__points .points svg.bolt {
+          background-color: #ff4738;
+          padding: 3px 2px 3px 4px;
+          object-fit: contain;
+          width: 18px;
+          height: 18px;
+          border-radius: 4px;
+          margin-right: 11px;
+          vertical-align: middle; }
+        .card-wrapper .card-small .card__points .points p {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+          margin-right: 10px; }
+      .card-wrapper .card-small .card__points .accept-button {
+        float: right;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        display: inline-block; }
 
 header {
   width: 20%;
@@ -430,6 +413,14 @@ header {
       letter-spacing: 1px; }
     header nav .logo p {
       display: inline-block; }
+  header nav .dropdown a svg.bi-chevron-down {
+    display: inline; }
+  header nav .dropdown a svg.bi-chevron-up {
+    display: inline; }
+  header nav .dropdown a svg.bi-chevron-down.hide {
+    display: none; }
+  header nav .dropdown a svg.bi-chevron-up.hide {
+    display: none; }
   header nav .dropdown .nav-menu {
     display: block;
     letter-spacing: 1px;
@@ -521,6 +512,17 @@ header .dropdown .dropdown__content.hide {
   .profile .profile__nav a {
     margin-right: 30px;
     opacity: 0.6; }
+  .profile .profile__nav .dropdown svg {
+    margin-left: 5px; }
+  .profile .profile__nav .dropdown-content-country {
+    position: absolute;
+    display: none; }
+    .profile .profile__nav .dropdown-content-country a {
+      display: block;
+      opacity: 1;
+      padding: 6px 0px; }
+  .profile .profile__nav .dropdown:hover .dropdown-content-country {
+    display: block; }
 
 .profile .profile__info {
   float: right;
@@ -541,7 +543,7 @@ header .dropdown .dropdown__content.hide {
       margin-right: 15px; }
       .profile .profile__info .points .uproar-points svg {
         background-color: #6f6eff;
-        padding: 3px 2px 3px 3px;
+        padding: 3px 2px 3px 4px;
         object-fit: contain;
         width: 18px;
         height: 18px;
@@ -562,7 +564,7 @@ header .dropdown .dropdown__content.hide {
       margin-right: 15px; }
       .profile .profile__info .points .bolt-points svg {
         background-color: #ff4738;
-        padding: 3px 2px 3px 3px;
+        padding: 3px 2px 3px 4px;
         object-fit: contain;
         width: 18px;
         height: 18px;
@@ -592,38 +594,11 @@ header .dropdown .dropdown__content.hide {
   .profile {
     text-align: center; }
     .profile .profile__nav {
-      float: right; }
-      .profile .profile__nav a {
-        margin-right: 10px;
-        opacity: 0.6; }
-    .profile .profile__info {
-      float: none;
-      position: relative; }
-      .profile .profile__info .points {
-        position: absolute;
-        top: 120%;
-        left: -15%;
-        right: 0;
-        transform: translate(0, -50%); }
-        .profile .profile__info .points .uproar-points {
-          margin-right: 0; }
-        .profile .profile__info .points .bolt-points {
-          margin-right: 0; } }
+      display: none; } }
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  .profile .profile__info {
-    float: right;
-    position: relative; }
-    .profile .profile__info .points {
-      position: absolute;
-      top: 120%;
-      left: -15%;
-      right: 0;
-      transform: translate(0, -50%); }
-      .profile .profile__info .points .uproar-points {
-        margin-right: 0; }
-      .profile .profile__info .points .bolt-points {
-        margin-right: 0; } }
+  .profile .profile__nav {
+    display: none; } }
 
 .weekly-quests .header {
   margin-top: 40px; }
@@ -636,12 +611,8 @@ header .dropdown .dropdown__content.hide {
     .weekly-quests .header .header__title h2 {
       margin-top: 10px; }
   .weekly-quests .header .header__controls {
-    display: inline-block;
-    float: right;
-    display: table; }
+    float: right; }
     .weekly-quests .header .header__controls button {
-      display: inline-block;
-      display: table-cell;
       vertical-align: middle;
       margin-right: 10px; }
     .weekly-quests .header .header__controls button.svg {
@@ -655,33 +626,31 @@ header .dropdown .dropdown__content.hide {
         display: block;
         margin: auto; }
 
-.popular .header {
-  margin-top: 40px; }
-  .popular .header .header__title {
-    display: inline-block;
-    margin-bottom: 25px; }
-    .popular .header .header__title p {
-      text-transform: uppercase;
-      opacity: 0.4; }
-    .popular .header .header__title h2 {
-      margin-top: 10px;
-      margin-bottom: 40px; }
-  .popular .header .header__controls {
-    display: inline-block;
-    float: right;
-    display: table; }
-    .popular .header .header__controls button {
+.popular {
+  margin-bottom: 50px; }
+  .popular .header {
+    margin-top: 40px; }
+    .popular .header .header__title {
       display: inline-block;
-      display: table-cell;
-      vertical-align: middle;
-      margin-right: 10px; }
-    .popular .header .header__controls button.svg {
-      padding: 9px;
-      background-color: #2b2c3a;
-      border: 1px solid rgba(216, 216, 216, 0.6);
-      border-radius: 4px;
-      line-height: 30px;
-      margin-right: 5px; }
-      .popular .header .header__controls button.svg svg {
-        display: block;
-        margin: auto; }
+      margin-bottom: 20px; }
+      .popular .header .header__title p {
+        text-transform: uppercase;
+        opacity: 0.4; }
+      .popular .header .header__title h2 {
+        margin-top: 10px;
+        margin-bottom: 40px; }
+    .popular .header .header__controls {
+      float: right; }
+      .popular .header .header__controls button {
+        vertical-align: middle;
+        margin-right: 10px; }
+      .popular .header .header__controls button.svg {
+        padding: 9px;
+        background-color: #2b2c3a;
+        border: 1px solid rgba(216, 216, 216, 0.6);
+        border-radius: 4px;
+        line-height: 30px;
+        margin-right: 5px; }
+        .popular .header .header__controls button.svg svg {
+          display: block;
+          margin: auto; }

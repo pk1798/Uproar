@@ -1,9 +1,10 @@
 .popular {
+  margin-bottom: 50px;
   .header {
     margin-top: 40px;
     .header__title {
       display: inline-block;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       p {
         text-transform: uppercase;
         opacity: 0.4;
@@ -14,22 +15,15 @@
       }
     }
     .header__controls {
-      display: inline-block;
       float: right;
-      display: table;
       button {
-        display: inline-block;
-        display: table-cell;
         vertical-align: middle;
         margin-right: 10px;
       }
       button.svg {
-        // width: 30px;
-        // height: 30px;
         padding: 9px;
         background-color: #2b2c3a;
         border: 1px solid rgba(216, 216, 216, 0.6);
-        // color: rgba(216, 216, 216, 0.6);
         border-radius: 4px;
         line-height: 30px;
         margin-right: 5px;

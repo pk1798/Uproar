@@ -24,6 +24,20 @@ header {
       }
     }
     .dropdown {
+      a {
+        svg.bi-chevron-down {
+          display: inline;
+        }
+        svg.bi-chevron-up {
+          display: inline;
+        }
+        svg.bi-chevron-down.hide {
+          display: none;
+        }
+        svg.bi-chevron-up.hide {
+          display: none;
+        }
+      }
       .nav-menu {
         display: block;
         letter-spacing: 1px;
@@ -98,10 +112,4 @@ header {
   .bi-list.hide {
     display: none;
   }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-}
-
-@media (min-width: 1440px) {
 }

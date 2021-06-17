@@ -11,6 +11,25 @@
       margin-right: 30px;
       opacity: 0.6;
     }
+    .dropdown {
+      svg {
+        margin-left: 5px;
+      }
+    }
+    .dropdown-content-country {
+      position: absolute;
+      display: none;
+      a {
+        display: block;
+        opacity: 1;
+        padding: 6px 0px;
+      }
+    }
+    .dropdown:hover {
+      .dropdown-content-country {
+        display: block;
+      }
+    }
   }
   .profile__info {
     float: right;
@@ -30,13 +49,7 @@
         float: left;
         margin-right: 15px;
         svg {
-          background-color: #6f6eff;
-          padding: 3px 2px 3px 3px;
-          object-fit: contain;
-          width: 18px;
-          height: 18px;
-          border-radius: 4px;
-          margin-right: 11px;
+          @include points-icon(#6f6eff);
         }
         p {
           display: table-cell;
@@ -55,13 +68,7 @@
         float: right;
         margin-right: 15px;
         svg {
-          background-color: #ff4738;
-          padding: 3px 2px 3px 3px;
-          object-fit: contain;
-          width: 18px;
-          height: 18px;
-          border-radius: 4px;
-          margin-right: 11px;
+          @include points-icon(#ff4738);
         }
         p {
           display: table-cell;
@@ -97,61 +104,15 @@
   .profile {
     text-align: center;
     .profile__nav {
-      float: right;
-      a {
-        margin-right: 10px;
-        opacity: 0.6;
-      }
-    }
-    .profile__info {
-      float: none;
-      position: relative;
-      .points {
-        position: absolute;
-        top: 120%;
-        left: -15%;
-        right: 0;
-        transform: translate(0, -50%);
-        .uproar-points {
-          margin-right: 0;
-        }
-        .bolt-points {
-          margin-right: 0;
-        }
-      }
-      .profile-details {
-      }
+      display: none;
     }
   }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
   .profile {
-    .profile__info {
-      float: right;
-      position: relative;
-      .points {
-        position: absolute;
-        top: 120%;
-        left: -15%;
-        right: 0;
-        // left: -120%;
-        transform: translate(0, -50%);
-        .uproar-points {
-          margin-right: 0;
-        }
-        .bolt-points {
-          margin-right: 0;
-        }
-      }
-      .profile-details {
-      }
+    .profile__nav {
+      display: none;
     }
   }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-}
-
-@media (min-width: 1440px) {
 }
