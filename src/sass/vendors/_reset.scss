@@ -133,6 +133,12 @@ table {
 * {
   box-sizing: border-box;
 }
+*,
+*:before,
+*:after,
+*:hover {
+  box-sizing: border-box;
+}
 
 h1,
 h2,
@@ -143,4 +149,8 @@ h6,
 p,
 a {
   color: $light;
+}
+
+button {
+  cursor: pointer;
 }

@@ -63,6 +63,7 @@ header {
     }
     .my-games {
       padding: 15px 0 15px 30px;
+
       border-top: 1px solid rgba(216, 216, 216, 0.6);
       border-bottom: 1px solid rgba(216, 216, 216, 0.6);
 
@@ -72,7 +73,36 @@ header {
     }
   }
 }
-
+nav {
+  a {
+    position: relative;
+    svg {
+      fill: #fff;
+    }
+  }
+  a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.04);
+    z-index: 100;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease-in;
+  }
+  a:hover::after {
+    transform: scaleX(1);
+    border-left: 3px solid $secondary;
+  }
+  a:hover {
+    svg {
+      fill: #6f6eff;
+    }
+  }
+}
 header {
   .dropdown {
     .dropdown__content.hide {
