@@ -30,6 +30,22 @@ dropdownMenuSecondary.addEventListener('click' ,function(){
     downSecondary.classList.toggle('hide');
 });
 
+
+const dropdown = document.getElementsByClassName('dropdown')
+// const dropdownContent = document.getElementsByClassName('dropdown__content')
+
+// // console.log(dropdown)
+
+// Array.from(dropdown).forEach(i => {
+//     // console.log(i)
+//     i.addEventListener('click', ()=>{
+//         console.log(i);
+//     })
+// })
+
+
+
+
 const countryValue = document.getElementById('country-value');
 const india = document.getElementById('india');
 const china = document.getElementById('china');

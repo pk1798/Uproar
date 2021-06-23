@@ -8,7 +8,6 @@ function listCard(arr){
         var li = document.createElement('li');
         li.className = 'glide__slide';
         container.appendChild(li)
-
         var card = `<div class="card">
         <p class="genre">${card.genre}</p>
         <figure>

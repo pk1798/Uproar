@@ -245,7 +245,7 @@ button {
   outline: none;
   border: none;
   border-radius: 4px;
-  background-color: #6b69f9;
+  background-color: #6f6eff;
   color: #ffffff;
   padding: 10px; }
 
@@ -545,14 +545,14 @@ header .dropdown .dropdown__content.hide {
     opacity: 0.6; }
   .profile .profile__nav .dropdown svg {
     margin-left: 5px; }
-  .profile .profile__nav .dropdown-content-country {
+  .profile .profile__nav .dropdown__content {
     position: absolute;
     display: none; }
-    .profile .profile__nav .dropdown-content-country a {
+    .profile .profile__nav .dropdown__content a {
       display: block;
       opacity: 1;
       padding: 6px 0px; }
-  .profile .profile__nav .dropdown:hover .dropdown-content-country {
+  .profile .profile__nav .dropdown:hover .dropdown__content {
     display: block; }
 
 .profile .profile__info {

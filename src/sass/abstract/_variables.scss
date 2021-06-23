@@ -6,12 +6,6 @@ $active: #24cb8d;
 $light: #ffffff;
 $dark: #000000;
 
-// $primary: #dee2e6;
-// $secondary: #6f6eff;
-// $active: #24cb8d;
-// $light: #000000;
-// $dark: #ffffff;
-
 // font size
 
 $font-size-exsm: 11px;
@@ -25,3 +19,11 @@ $font-size-xxl: 22px;
 
 $font-normal: 400;
 $font-bold: 600;
+
+.dark-theme {
+  $primary: #e9ecef;
+  $secondary: #6f6eff;
+  $active: #24cb8d;
+  $light: #000000;
+  $dark: #ffffff;
+}
